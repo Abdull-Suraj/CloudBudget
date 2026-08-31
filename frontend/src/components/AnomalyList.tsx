@@ -22,9 +22,9 @@ export function AnomalyList({ anomalies, period }: Props) {
         <p className="text-sm text-gray-400">No anomalies detected.</p>
       ) : (
         <ul className="space-y-3">
-          {anomalies.map((a, i) => (
+          {anomalies.map((a) => (
             <li
-              key={i}
+              key={`${a.day}-${a.service}`}
               className={`border rounded-xl px-4 py-3 ${severityColors[a.severity]}`}
             >
               <div className="flex items-center justify-between mb-1">

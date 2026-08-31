@@ -56,7 +56,7 @@ export function ForecastChart({ data }: Props) {
             name="Forecast"
             connectNulls
           />
-          <ReferenceLine x={25} stroke="#d1d5db" strokeDasharray="4 4" label={{ value: "today", fontSize: 10 }} />
+          <ReferenceLine x={new Date().getDate()} stroke="#d1d5db" strokeDasharray="4 4" label={{ value: "today", fontSize: 10 }} />
         </LineChart>
       </ResponsiveContainer>
     </div>
